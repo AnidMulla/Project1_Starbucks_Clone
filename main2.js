@@ -47,7 +47,7 @@ image1(() => {
 
 message = document.getElementById("fly").innerHTML; // $ = taking a new line
 distance = 150; // pixel(s)
-speed = 20; // milliseconds
+speed = 30; // milliseconds
 
 var txt="",
 	num=0,
