@@ -216,6 +216,15 @@ img
     font-weight: 500;
     margin:0.2rem 0 0.5rem;
 }
+.shop-container .box .box-img:hover {
+    filter: blur(1px);
+    transition: 0.5s ease-in-out;
+}
+.shop-container .box:hover
+{
+    filter: blur(1px);
+    transition: 0.5s ease-in-out;
+}
 .box .btn
 {
     border: 2px solid #ebdbc8;
