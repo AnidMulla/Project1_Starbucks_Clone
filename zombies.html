@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* //linearGradient */
+        .images {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* flex-direction: column; */
+            gap: 2rem;
+
+        }
+
+        .zombie {
+            border-radius: 50%;
+        }
+
+        .z {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        /* body {
+            background-color: white;
+            animation-name: example;
+            animation-duration: 4s;
+            animation-timing-function:ease-in
+            
+            /* animation-iteration-count: infinite; */
+        /* }
+
+        @keyframes example { */
+            /* 0% {
+                background-color: whitesmoke
+            }
+
+            25% {
+                background-color: bisque
+            }
+
+            50% {
+                background-color: lightblue
+            }
+
+            100% {
+                background-color: blanchedalmond
+            } */
+            /* from {background-color: white;}
+  to {background: linear-gradient(to top, #d5dee7 0%, #ffafbd 0%, #c9ffbf 100%);}
+        } */ 
+        body {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+    </style>
+</head>
+
+<body>
+    <div class="container" id="first">
+        <div class="text-field" id="text-f">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus recusandae
+            officia sequi
+            beatae odio voluptatibus illum consectetur excepturi, hic, molestias unde? Iusto amet veniam eos possimus
+            odio nam excepturi! Dolorem error nemo vel laboriosam.</div>
+        <div class="images">
+            <div class="z"><img src="" alt="" id="anid" class="zombie">
+                <h3 id="name1"></h3>
+            </div>
+
+            <div class="z"> <img src="" alt="" id="nitin" class="zombie">
+                <h3 id="name2"></h3>
+            </div>
+            <div class="z"> <img src="" alt="" id="deb" class="zombie">
+                <h3 id="name3"></h3>
+            </div>
+            <div class="z"> <img src="" alt="" id="nitu" class="zombie">
+                <h3 id="name4"></h3>
+            </div>
+
+        </div>
+    </div>
+    <script>
+        let x = document.getElementById('first');
+
+        function image1(callback) {
+            setTimeout(() => {
+                document.getElementById("anid").src = "img/zombie4.png";
+                document.getElementById("name1").innerHTML = "Anid";
+                callback();
+            }, 2000);
+
+        }
+
+        function image2(callback) {
+            setTimeout(() => {
+                document.getElementById("nitin").src = "img/zombie3.png";
+                document.getElementById("name2").innerHTML = "Nitin";
+                callback();
+            }, 2000);
+
+        }
+
+        function image3(callback) {
+            setTimeout(() => {
+                document.getElementById("deb").src = "img/zombie2.png";
+                document.getElementById("name3").innerHTML = "Deb";
+                callback();
+            }, 2000);
+
+        }
+
+        function image4() {
+            setTimeout(() => {
+                document.getElementById("nitu").src = "img/zombie1.png";
+                document.getElementById("name4").innerHTML = "Nitu";
+            }, 2000);
+
+        }
+        image1(() => {
+            image2(() => {
+                image3(() => {
+                    image4();
+                });
+            });
+        });
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
